@@ -6,8 +6,6 @@
   "scripts": {
     "dev": "vite",
     "server": "node server.js",
-    "docker:start": "docker-compose up -d --build",
-    "docker:stop": "docker-compose down",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
