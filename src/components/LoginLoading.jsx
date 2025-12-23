@@ -83,8 +83,8 @@ export function LoginLoading({ error = null }) {
     return (
         <div style={styles.page}>
             <style>{keyframes}</style>
-            <div style={styles.badge}>Tianjie</div>
-            <div style={styles.title}>天杰实业 · 工资单</div>
+            {/* <div style={styles.badge}>Tianjie</div> */}
+            <div style={styles.title}>工资单</div>
             <div style={styles.subtitle}>
                 {error ? '登录失败' : '正在为您验证身份'}
             </div>
@@ -99,8 +99,6 @@ export function LoginLoading({ error = null }) {
             )}
 
             {error && <div style={styles.error}>{error}</div>}
-
-            <div style={styles.footer}>天杰实业有限公司 · 数字化部门支持</div>
         </div>
     );
 }
