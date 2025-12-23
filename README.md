@@ -14,19 +14,7 @@
 *   **Web 服务器**: Nginx (用于生产环境前端托管及反向代理)
 
 ### 数据流向
-```
-graph LR
-    User["用户 (飞书客户端)"] -->|打开应用| Frontend["前端 (React)"]
-    Frontend -->|1. 获取 AppID| API["后端 (Express)"]
-    Frontend -->|2. tt.requestAccess| Lark[飞书开放平台]
-    Lark -->|3. 返回 Code| Frontend
-    Frontend -->|4. 提交 Code| API
-    API -->|5. 校验 Code & 获取 Token| Lark
-    Lark -->|6. 返回 User Info| API
-    API -->|7. 返回用户信息| Frontend
-    Frontend -->|8. 查询工资数据| SalarySys[工资数据源]
-
-```
+ ![数据流向](md/data_flow.svg)
 
 ## 3. 核心模块说明
 
